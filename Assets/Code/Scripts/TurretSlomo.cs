@@ -56,7 +56,7 @@ public class TurretSlomo : MonoBehaviour
 
     private void FreezeEffect() {
         GameObject iceEffectObj = Instantiate(iceEffect, transform.position, Quaternion.identity);
-        Destroy(iceEffectObj, 1f);
+        Destroy(iceEffectObj, freezeTime);
     }
 
     private IEnumerator ResetEnemySpeed(EnemyMovement em) {

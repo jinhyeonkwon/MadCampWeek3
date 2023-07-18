@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5665087937285885645}
-  - component: {fileID: 2302331103058913001}
+  - component: {fileID: -1533184009449673626}
   m_Layer: 0
   m_Name: Nubjuk Turret
   m_TagString: Untagged
@@ -96,9 +96,9 @@ Transform:
   - {fileID: 3536001552038392782}
   - {fileID: 7355226784619098509}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2302331103058913001
+--- !u!114 &-1533184009449673626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6359130945826908788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14c94503e1654c94f88f8ac72d81d849, type: 3}
+  m_Script: {fileID: 11500000, guid: aa1de87b50a7d7c4c9805c31052ce12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   turretRotationPoint: {fileID: 7355226784619098509}
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_SortingLayerID: -1993856251
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1511936279, guid: 7e5239fee3e207f4f8a119de7a4e45dc, type: 3}
+  m_Sprite: {fileID: 686240035, guid: 991d827995935c44ca533c64f3d1d2db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -276,7 +276,7 @@ SpriteRenderer:
   m_SortingLayerID: -1993856251
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 492499072, guid: 7e5239fee3e207f4f8a119de7a4e45dc, type: 3}
+  m_Sprite: {fileID: -585279235, guid: 991d827995935c44ca533c64f3d1d2db, type: 3}
   m_Color: {r: 0.25497246, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
