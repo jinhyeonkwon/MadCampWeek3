@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 1
+  - name: Plots
+    uniqueID: 3859186345
+    locked: 0
   - name: Turrets
     uniqueID: 2301111045
     locked: 0

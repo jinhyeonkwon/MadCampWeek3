@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1993856251
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d31303a3610732c469721e568ab613aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,6 +104,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   firingPoint: {fileID: 0}
   iceEffect: {fileID: 4361813245065039132, guid: fe422b5c756370f4d846f7189aad9ab5, type: 3}
-  targetingRange: 3
+  targetingRange: 2.5
   aps: 0.33
   freezeTime: 1.5

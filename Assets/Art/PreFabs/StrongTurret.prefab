@@ -73,9 +73,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5665087937285885645}
-  - component: {fileID: -1533184009449673626}
+  - component: {fileID: 2302331103058913001}
   m_Layer: 0
-  m_Name: Nubjuk Turret
+  m_Name: StrongTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1533184009449673626
+--- !u!114 &2302331103058913001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,18 +107,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6359130945826908788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa1de87b50a7d7c4c9805c31052ce12f, type: 3}
+  m_Script: {fileID: 11500000, guid: 14c94503e1654c94f88f8ac72d81d849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   turretRotationPoint: {fileID: 7355226784619098509}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 172215634190925238, guid: 8ba4d9740b387de41bc3fa1aded9ca45, type: 3}
+  bulletPrefab: {fileID: 172215634190925238, guid: 7ca5beb1f7213ed41b6bb38267b141a9, type: 3}
   firingPoint: {fileID: 5647078737417619740}
-  targetingRange: 4
+  targetingRange: 3
   rotationSpeed: 200
-  bps: 0.4
+  bps: 1.2
 --- !u!1 &7247731429391179695
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_SortingLayerID: -1993856251
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 686240035, guid: 991d827995935c44ca533c64f3d1d2db, type: 3}
+  m_Sprite: {fileID: 919571079, guid: b46528f52d6b91b4dac9af7992797f9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -276,8 +276,8 @@ SpriteRenderer:
   m_SortingLayerID: -1993856251
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -585279235, guid: 991d827995935c44ca533c64f3d1d2db, type: 3}
-  m_Color: {r: 0.25497246, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 421350791, guid: b46528f52d6b91b4dac9af7992797f9d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

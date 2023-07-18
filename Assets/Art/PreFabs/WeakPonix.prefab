@@ -179,7 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 1
-  currencyWorth: 5
+  currencyWorth: 8
+  damageResistance: 0
 --- !u!114 &2617923065116806044
 MonoBehaviour:
   m_ObjectHideFlags: 0
