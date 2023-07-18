@@ -9,11 +9,21 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
 
     [Header("Attributes")]
-    [SerializeField] private int baseEnemies = 8;
-    [SerializeField] private float enemiesPerSecond = 0.5f; // base 속도
+    //[SerializeField] private int baseEnemies = 8;
+    //[SerializeField] private float enemiesPerSecond = 0.5f; // base 속도
     [SerializeField] private float timeBetweenWaves = 5f;
-    [SerializeField] private float difficultyScalingFactor = 0.75f;
-    [SerializeField] private float enemiesPerSecondCap = 15f;
+    //[SerializeField] private float difficultyScalingFactor = 0.75f;
+    //[SerializeField] private float enemiesPerSecondCap = 15f;
+
+    [Header("EnemySettings")]
+    [SerializeField] private int[] weakPonixNum = {5, 4, 0, 0, 0, 0, 0, 0};
+    [SerializeField] private int[] ponixNum = {3, 5, 5, 4, 0, 0, 0, 0};
+    [SerializeField] private int[] tankPonixNum = {0, 0, 5, 4, 6, 4, 5, 0};
+    [SerializeField] private int[] fastPonixNum = {0, 0, 0, 4, 6, 5, 5, 0};
+    [SerializeField] private int[] doublePonixNum = {0, 0, 0, 0, 3, 5, 5, 0};
+    [SerializeField] private int[] jangNum = {0, 0, 0, 0, 0, 2, 4, 0};
+    [SerializeField] private int[] leeNum = {0, 0, 0, 0, 0, 0, 0, 1};
+    [SerializeField] private float[] epsArray = {0.6f, 0.8f, 1f, 1.2f, 1.5f, 2f, 2.5f, 3f}; // 이 숫자의 역수에 몬스터 속도만큼을 곱한 시간을 기다려서 스폰
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
@@ -21,9 +31,13 @@ public class EnemySpawner : MonoBehaviour
     private int currentWave = 0;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
-    private int enemiesLeftToSpawn;
+    private int[] enemiesLeftToSpawnArray = new int[7];
+    private int enemiesLeftToSpawn = 0;
     private bool isSpawning = false;
     private float eps; // Enemies per second
+
+    private int currentEnemy; // 몇 번째 적 스폰 중?
+    private int currentCnt;
 
     private void EnemyDestroyed() {
         enemiesAlive--;
@@ -43,8 +57,20 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator startWave() {
         yield return new WaitForSeconds(timeBetweenWaves);
         currentWave++;
+        currentEnemy = 0;
+        currentCnt = 0;
         isSpawning = true;
-        enemiesLeftToSpawn = EnemiesPerWave();
+        enemiesLeftToSpawnArray[0] = weakPonixNum[currentWave - 1];
+        enemiesLeftToSpawnArray[1] = ponixNum[currentWave - 1];
+        enemiesLeftToSpawnArray[2] = tankPonixNum[currentWave - 1];
+        enemiesLeftToSpawnArray[3] = fastPonixNum[currentWave - 1];
+        enemiesLeftToSpawnArray[4] = doublePonixNum[currentWave - 1];
+        enemiesLeftToSpawnArray[5] = jangNum[currentWave - 1];
+        enemiesLeftToSpawnArray[6] = leeNum[currentWave - 1];
+        enemiesLeftToSpawn = 0;
+        for (int i = 0; i < 7; i++) {
+            enemiesLeftToSpawn += enemiesLeftToSpawnArray[i];
+        }
         eps = EnemiesPerSecond();
     }
 
@@ -54,26 +80,32 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(startWave());
     }
 
-    private int EnemiesPerWave() {
-        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor ));
-    }
+    // private int EnemiesPerWave() {
+    //     return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor ));
+    // }
 
     private float EnemiesPerSecond() {
-        return Mathf.Clamp(enemiesPerSecond * Mathf.Pow(currentWave, difficultyScalingFactor), 0, enemiesPerSecondCap);
+        return epsArray[currentWave - 1] * enemyPrefabs[currentEnemy].GetComponent<EnemyMovement>().moveSpeed;
     }
 
     private void SpawnEnemy() {
-        int index;
-        if (currentWave == 1) {
-            index = 0;
-        } else if (currentWave <= 2) {
-            index = Random.Range(0, 2);
-        } else if (currentWave <= 3) {
-            index = Random.Range(1, 3);
-        } else {
-            index = Random.Range(1, 4);
+        if (enemiesLeftToSpawn == 0) return;
+        while (enemiesLeftToSpawnArray[currentEnemy] == 0) {
+            currentEnemy++;
+            eps = EnemiesPerSecond();
+            currentCnt = 0;
+            if (currentEnemy == 7) {
+                return;
+            }
         }
-        GameObject prefabToSpawn = enemyPrefabs[index];
+        if (currentCnt >= enemiesLeftToSpawnArray[currentEnemy]) {
+            currentEnemy++;
+            eps = EnemiesPerSecond();
+            currentCnt = 0;
+        }
+        GameObject prefabToSpawn = enemyPrefabs[currentEnemy];
+        currentCnt++;
+        Debug.Log(currentEnemy + " " + currentCnt + " th Monster Spawned");
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 

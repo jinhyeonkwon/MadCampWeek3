@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -216920709149676431}
   - component: {fileID: 2617923065116806044}
   m_Layer: 6
-  m_Name: Ponix
+  m_Name: Jang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: -1993856251
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4ee87ff8981a8a4b9179e97e01694c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5dfa4fa664242a4c8a1e8fcc8f4e92a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 801660626510203188}
-  moveSpeed: 3
-  power: 5
+  moveSpeed: 1.5
+  power: 10
 --- !u!114 &-216920709149676431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef198e7066feee240a1f61d53014469a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 3
-  currencyWorth: 15
+  hitPoints: 25
+  currencyWorth: 100
+  damageResistance: 0
 --- !u!114 &2617923065116806044
 MonoBehaviour:
   m_ObjectHideFlags: 0
