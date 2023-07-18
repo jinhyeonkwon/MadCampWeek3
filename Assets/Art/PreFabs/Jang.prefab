@@ -178,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef198e7066feee240a1f61d53014469a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 40
+  hitPoints: 10
   currencyWorth: 100
-  damageResistance: 0
+  damageResistance: 1
 --- !u!114 &2617923065116806044
 MonoBehaviour:
   m_ObjectHideFlags: 0
