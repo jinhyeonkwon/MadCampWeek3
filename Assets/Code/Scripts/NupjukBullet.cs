@@ -15,7 +15,7 @@ public class NupjukBullet : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
     [SerializeField] private int bulletDamage = 1;
-    [SerializeField] private float explosionRange = 0.7f;
+    [SerializeField] private float explosionRange = 0.875f;
     
 
     public Transform target;
