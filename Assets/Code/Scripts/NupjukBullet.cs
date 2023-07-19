@@ -23,7 +23,7 @@ public class NupjukBullet : MonoBehaviour
     public void SetTarget(Transform _target) {
         target = _target;
     }
-   
+
     
     // Start is called before the first frame update
     void Start()

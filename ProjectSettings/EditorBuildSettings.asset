@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DotmapScene2.unity
     guid: ca9c61fac6e3cf140b3977620278aed0
+  - enabled: 1
+    path: Assets/Scenes/GameClear.unity
+    guid: 2c589257af9172f46aa05597fd450ab1
   m_configObjects: {}
