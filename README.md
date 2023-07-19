@@ -5,9 +5,9 @@ Unity Tower Defense Game Project<br/>
 <br/>
 |Teammates|University|github|
 |------|---|---|
-|Dongwoo Jang|Hanyang University|[jjangddu]:github.com/jjangddu|
-|Jinhyeon Kwon|KAIST|[jinhyeonkwon]:github.com/jinhyeonkwon|
-|Mingyu Kim|KAIST|[mingyu0304]:github.com/mingyu0304|
+|Dongwoo Jang|Hanyang University|[jjangddu](http://github.com/jjangddu)|
+|Jinhyeon Kwon|KAIST|[jinhyeonkwon](http://github.com/jinhyeonkwon)|
+|Mingyu Kim|KAIST|[mingyu0304](http://github.com/mingyu0304)|
 <br/>
 ## Game Screenshots<br/>
 <br/>
