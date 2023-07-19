@@ -1,7 +1,7 @@
 # MadCampWeek3 : KTD (KAIST Tower Defense)
 Unity Tower Defense Game Project
 
-[Click to Download](https://drive.google.com/file/d/1U5wXhs4dRAbR_Q6BXK30dWYvWDsyvx8x/view?usp=drive_link)
+[Click to Download](https://drive.google.com/file/d/142wNTJW-CSISZpf7jeXAkmQJ1jFoNOaA/view?usp=sharing)
 
 ## Our Team
 
