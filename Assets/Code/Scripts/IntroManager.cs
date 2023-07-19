@@ -8,6 +8,6 @@ public class IntroManager : MonoBehaviour
 {
     public void SceneChange(){
         Debug.Log("123123");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MenuScene");
     }
 }

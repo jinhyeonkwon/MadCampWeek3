@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 7cebb914563fa5e4b82eab1093553963
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: 6ce85164923a66741ac1a976301b5e29
+  - enabled: 1
+    path: Assets/Scenes/DotmapScene1.unity
+    guid: be21ff67b5bf3a943bac5aa5b5feba9b
+  - enabled: 1
+    path: Assets/Scenes/DotmapScene2.unity
+    guid: ca9c61fac6e3cf140b3977620278aed0
   m_configObjects: {}
