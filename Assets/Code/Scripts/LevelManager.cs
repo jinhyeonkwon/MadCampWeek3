@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -17,32 +18,42 @@ public class LevelManager : MonoBehaviour
     public int currency;
     public int lives;
 
-    private void Awake(){
+    private void Awake()
+    {
         main = this;
+        lives = 100;
     }
-    
+
     void Start()
     {
         currency = startCurrency;
         lives = startLives;
     }
 
-    public void IncreaseCurrency(int amount){
+    public void IncreaseCurrency(int amount)
+    {
         currency += amount;
     }
 
-    public void DecreaseLives(int damage){
+    public void DecreaseLives(int damage)
+    {
         lives -= damage;
-        if (lives <= 0) {
-            Debug.Log("Game Over");
+
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene("GameEnd");
         }
     }
 
-    public bool SpendCurency(int amount){
-        if (amount <= currency) {
+    public bool SpendCurency(int amount)
+    {
+        if (amount <= currency)
+        {
             currency -= amount;
             return true;
-        } else {
+        }
+        else
+        {
             Debug.Log("You do not have ~~~~");
             return false;
         }
@@ -51,6 +62,6 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
