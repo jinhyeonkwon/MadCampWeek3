@@ -1,8 +1,7 @@
 # MadCampWeek3 : KTD (KAIST Tower Defense)
 Unity Tower Defense Game Project
 
-- Download : https://drive.google.com/file/d/1U5wXhs4dRAbR_Q6BXK30dWYvWDsyvx8x/view?usp=drive_link
-- Information : https://docs.google.com/spreadsheets/d/1bWD4xlxnwZuF_XTn5rrlwkNpQiMYI-94Wpi3zzy1edE/edit?usp=sharing
+[Click to Download](https://drive.google.com/file/d/1U5wXhs4dRAbR_Q6BXK30dWYvWDsyvx8x/view?usp=drive_link)
 
 ## Our Team
 
@@ -38,6 +37,12 @@ normal mode
 <br/>
 KAIST mode
 <br/>
+
+
+## Game Info
+
+[google docs](https://docs.google.com/spreadsheets/d/1bWD4xlxnwZuF_XTn5rrlwkNpQiMYI-94Wpi3zzy1edE/edit?usp=sharing)
+information about map, monster, turrets
 
 ## How to play
 You can put turrets by clicking 'basic turret(100)', "ice tower(200)', 'nupjuk turret(300)', 'fast turret(200)', 'strong turret(300)' and clicking black squares.
