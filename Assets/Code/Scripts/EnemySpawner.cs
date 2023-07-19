@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// 이 스크립트 복제해서 맵별로 다르게 해 줘야 함!
+
 public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
@@ -12,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     //[SerializeField] private int baseEnemies = 8;
     //[SerializeField] private float enemiesPerSecond = 0.5f; // base 속도
     [SerializeField] private float timeBetweenWaves = 5f;
+    [SerializeField] private int numOfWaves = 8;
+    [SerializeField] private int numOfEnemies = 7;
     //[SerializeField] private float difficultyScalingFactor = 0.75f;
     //[SerializeField] private float enemiesPerSecondCap = 15f;
 
@@ -31,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
     private int currentWave = 0;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
-    private int[] enemiesLeftToSpawnArray = new int[7];
+    private int[] enemiesLeftToSpawnArray = new int[numOfEnemies];
     private int enemiesLeftToSpawn = 0;
     private bool isSpawning = false;
     private float eps; // Enemies per second
@@ -57,6 +61,9 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator startWave() {
         yield return new WaitForSeconds(timeBetweenWaves);
         currentWave++;
+        // if (currentWave > numOfWaves) {
+            // 성공
+        // }
         currentEnemy = 0;
         currentCnt = 0;
         isSpawning = true;
@@ -68,7 +75,7 @@ public class EnemySpawner : MonoBehaviour
         enemiesLeftToSpawnArray[5] = jangNum[currentWave - 1];
         enemiesLeftToSpawnArray[6] = leeNum[currentWave - 1];
         enemiesLeftToSpawn = 0;
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < numOfEnemies; i++) {
             enemiesLeftToSpawn += enemiesLeftToSpawnArray[i];
         }
         eps = EnemiesPerSecond();
@@ -94,7 +101,7 @@ public class EnemySpawner : MonoBehaviour
             currentEnemy++;
             eps = EnemiesPerSecond();
             currentCnt = 0;
-            if (currentEnemy == 7) {
+            if (currentEnemy == numOfEnemies) {
                 return;
             }
         }

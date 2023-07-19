@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
     public void DecreaseLives(int damage)
     {
         lives -= damage;
+
         if (lives <= 0)
         {
             SceneManager.LoadScene("GameEnd");

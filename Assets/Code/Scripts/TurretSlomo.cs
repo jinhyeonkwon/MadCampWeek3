@@ -55,7 +55,7 @@ public class TurretSlomo : MonoBehaviour
     }
 
     private void FreezeEffect() {
-        GameObject iceEffectObj = Instantiate(iceEffect, transform.position, Quaternion.identity);
+        GameObject iceEffectObj = Instantiate(iceEffect, transform.position + new Vector3(0f, 0f, -0.2f), Quaternion.identity);
         Destroy(iceEffectObj, freezeTime);
     }
 
