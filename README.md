@@ -1,10 +1,10 @@
-# MadCampWeek3
-<br/>
-Unity Tower Defense Game Project<br/>
-<br/>
+# MadCampWeek3 : KTD (KAIST Tower Defense)
+Unity Tower Defense Game Project
+
+- Download : https://drive.google.com/file/d/1U5wXhs4dRAbR_Q6BXK30dWYvWDsyvx8x/view?usp=drive_link
+- Information : https://docs.google.com/spreadsheets/d/1bWD4xlxnwZuF_XTn5rrlwkNpQiMYI-94Wpi3zzy1edE/edit?usp=sharing
+
 ## Our Team
-<br/>
-<br/>
 
 |Teammates|University|github|
 |------|---|---|
@@ -12,7 +12,8 @@ Unity Tower Defense Game Project<br/>
 |Jinhyeon Kwon|KAIST|[jinhyeonkwon](http://github.com/jinhyeonkwon)|
 |Mingyu Kim|KAIST|[mingyu0304](http://github.com/mingyu0304)|
 <br/>
-## Game Screenshots<br/>
+
+## Game Screenshots
 <br/>
 <img width="960" alt="image" src="https://github.com/jinhyeonkwon/MadCampWeek3/assets/55375379/e5fc4dc2-8646-4025-a366-79eda3e5f3d6">
 <br/>
@@ -39,15 +40,4 @@ KAIST mode
 <br/>
 
 ## How to play
-<br/>
-we can put turrets by clicking 'basic turret(100)', "ice tower(200)', 'nupjuk turret(300)', 'fast turret(200)', 'strong turret(300)' and clicking black squares.
-<br/>
-
-<br/>
-## How to download
-<br/>
-you can download exe file and start it in your desktop
-
-<br/>
-
-
+You can put turrets by clicking 'basic turret(100)', "ice tower(200)', 'nupjuk turret(300)', 'fast turret(200)', 'strong turret(300)' and clicking black squares.
