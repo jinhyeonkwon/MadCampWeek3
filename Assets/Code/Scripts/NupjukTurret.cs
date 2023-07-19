@@ -53,7 +53,7 @@ public class NupjukTurret : MonoBehaviour
     }
 
     private void Shoot() {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position + new Vector3(0f, 0f, -0.2f), Quaternion.identity);
         NupjukBullet bulletScript = bulletObj.GetComponent<NupjukBullet>();
         bulletScript.SetTarget(target);
     }

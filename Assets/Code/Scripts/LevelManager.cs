@@ -35,6 +35,7 @@ public class LevelManager : MonoBehaviour
         lives -= damage;
         if (lives <= 0) {
             Debug.Log("Game Over");
+            // 게임 오버 코드
         }
     }
 
