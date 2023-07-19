@@ -14,10 +14,10 @@ public class Explosion : MonoBehaviour
     
     // public Transform target;
 
-    private void OnDrawGizmosSelected() {
-        Handles.color= Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, explosionRange);
-    }
+    // private void OnDrawGizmosSelected() {
+    //     Handles.color= Color.cyan;
+    //     Handles.DrawWireDisc(transform.position, transform.forward, explosionRange);
+    // }
     
     // private IEnumerator wait() {
     //     yield return new WaitForSeconds(0.5f);

@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
     //[SerializeField] private int baseEnemies = 8;
     //[SerializeField] private float enemiesPerSecond = 0.5f; // base 속도
     [SerializeField] private float timeBetweenWaves = 5f;
-    [SerializeField] private int numOfWaves = 8;
+    [SerializeField] public int numOfWaves = 8;
     //[SerializeField] private float difficultyScalingFactor = 0.75f;
     //[SerializeField] private float enemiesPerSecondCap = 15f;
 
@@ -32,8 +32,10 @@ public class EnemySpawner : MonoBehaviour
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
 
-    private int numOfEnemies = 7; // 커스터마이징 실패로 전체 enemy 종류 수를 사용함.
-    private int currentWave = 0;
+    public static EnemySpawner main;
+
+    public int numOfEnemies = 7; // 커스터마이징 실패로 전체 enemy 종류 수를 사용함.
+    public int currentWave = 0;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int[] enemiesLeftToSpawnArray = new int[7]; // 모든 적이 다 나오면 7종류이기 때문.
@@ -43,7 +45,6 @@ public class EnemySpawner : MonoBehaviour
 
     private int currentEnemy; // 몇 번째 적 스폰 중?
     private int currentCnt;
-
     private void EnemyDestroyed()
     {
         enemiesAlive--;
@@ -52,6 +53,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+        main = this;
         onEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
@@ -64,12 +66,12 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator startWave()
     {
         yield return new WaitForSeconds(timeBetweenWaves);
-        currentWave++;
-        if (currentWave > numOfWaves)
+        if (currentWave >= numOfWaves)
         {
             SceneManager.LoadScene("GameClear");
             yield break;
         }
+        currentWave++;
         currentEnemy = 0;
         currentCnt = 0;
         isSpawning = true;

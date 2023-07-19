@@ -8,14 +8,16 @@ public class Menu : MonoBehaviour
     [Header("References")]
     [SerializeField] TextMeshProUGUI currencyUI;
     [SerializeField] TextMeshProUGUI livesUI;
+    [SerializeField] TextMeshProUGUI waveUI;
     [SerializeField] Animator anim;
-
+    [SerializeField] int numOfWaves;
     private bool isMenuOpen = true;
 
 
     private void OnGUI() {
         currencyUI.text = "Money : " + LevelManager.main.currency.ToString();
         livesUI.text = "Lives : " + LevelManager.main.lives.ToString();
+        waveUI.text = "Wave " + EnemySpawner.main.currentWave.ToString() + " / " + numOfWaves.ToString();
     }
 
     public void SetSelected() {

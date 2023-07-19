@@ -19,10 +19,10 @@ public class Turret : MonoBehaviour
     private Transform target;
     private float timeUntilFire;
 
-    private void OnDrawGizmosSelected() {
-        Handles.color= Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    }
+    // private void OnDrawGizmosSelected() {
+    //     Handles.color= Color.cyan;
+    //     Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    // }
 
     
     // Start is called before the first frame update
