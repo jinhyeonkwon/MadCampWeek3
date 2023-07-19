@@ -1,7 +1,8 @@
-# MadCampWeek3<br/>
+# MadCampWeek3
+<br/>
 Unity Tower Defense Game Project<br/>
 <br/>
-## Our Team<br/>
+## Our Team
 <br/>
 |Teammates|University|github|
 |------|---|---|
