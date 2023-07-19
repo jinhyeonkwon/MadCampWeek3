@@ -10,7 +10,7 @@ public class Explosion : MonoBehaviour
     // [SerializeField] private LayerMask enemyMask;
 
     [Header("Attributes")]
-    [SerializeField] private float explosionRange = 0.7f;
+    [SerializeField] private float explosionRange = 0.9f;
     
     // public Transform target;
 

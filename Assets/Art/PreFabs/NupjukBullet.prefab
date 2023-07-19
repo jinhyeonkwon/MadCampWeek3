@@ -168,5 +168,5 @@ MonoBehaviour:
     m_Bits: 64
   bulletSpeed: 5
   bulletDamage: 2
-  explosionRange: 1.2
+  explosionRange: 1.4
   target: {fileID: 0}
