@@ -1,7 +1,7 @@
 # MadCampWeek3 : KTD (KAIST Tower Defense)
 Unity Tower Defense Game Project
 
-[Click to Download](https://drive.google.com/file/d/142wNTJW-CSISZpf7jeXAkmQJ1jFoNOaA/view?usp=sharing)
+[Click to Play](https://jinhyeonkwon.github.io/KTD_Deploy) (Screen Size : 1920 * 1080)
 
 ## Our Team
 
