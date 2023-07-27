@@ -12,37 +12,39 @@ Unity Tower Defense Game Project
 |Mingyu Kim|KAIST|[mingyu0304](http://github.com/mingyu0304)|
 <br/>
 
+## 📚STACKS
+<div align=left> 
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
+<br/>
+
 ## Game Screenshots
 <br/>
-<img width="960" alt="image" src="https://github.com/jinhyeonkwon/MadCampWeek3/assets/55375379/e5fc4dc2-8646-4025-a366-79eda3e5f3d6">
+사진넣기<br/>
+Login page
 <br/>
-game start
 <br/>
-<img width="960" alt="image" src="https://github.com/jinhyeonkwon/MadCampWeek3/assets/55375379/fa89af19-93a6-4140-be5a-a3b95f79dad2">
+사진넣기<br/>
+Singup Page
 <br/>
-main menu
-
-<img width="960" alt="image" src="https://github.com/jinhyeonkwon/MadCampWeek3/assets/55375379/d06dfc07-fb67-4576-8259-ea056c2c2621">
-
 <br/>
-easy mode
+사진넣기<br/>
+Profile Page
 <br/>
-<img width="960" alt="image" src="https://github.com/jinhyeonkwon/MadCampWeek3/assets/55375379/8d39bff4-0027-4cd8-a5d7-75c5133612a8">
-
 <br/>
-normal mode
-<br/>
-<img width="960" alt="image" src="https://github.com/jinhyeonkwon/MadCampWeek3/assets/55375379/87450167-8a67-401b-a93c-30ab4ec96339">
-
-<br/>
-KAIST mode
+사진넣기<br/>
+Game Page
 <br/>
 
 
 ## Game Info
 
-[google docs](https://docs.google.com/spreadsheets/d/1bWD4xlxnwZuF_XTn5rrlwkNpQiMYI-94Wpi3zzy1edE/edit?usp=sharing)
-information about map, monster, turrets
+We used django channels to make websocket backend. <br/>
+In game page, we have chatting and drawing componenets. We used 'usewebsocket' library for chatting, and 'w3cwebsocket' library for drawing componenets. It was easy to make chatting page synchronize with websocket backend, but drawing page was hard to synchronize. So we find new method to show our server's canvas in game page, simply bringing canvas page into our react page.
+<br/>
 
 ## How to play
 You can put turrets by clicking 'basic turret(100)', "ice tower(200)', 'nupjuk turret(300)', 'fast turret(200)', 'strong turret(300)' and clicking black squares.
